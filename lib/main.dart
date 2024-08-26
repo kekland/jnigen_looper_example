@@ -66,6 +66,11 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
+  void _quitLooper() {
+    debugPrint('_quitLooper');
+    Looper.myLooper().quitSafely();
+  }
+
   @override
   Widget build(BuildContext context) {
     final isLooperPrepared = !Looper.myLooper().isNull;
@@ -94,6 +99,10 @@ class _HomePageState extends State<HomePage> {
             ElevatedButton(
               onPressed: isLooperPrepared ? _loopLooper : null,
               child: const Text('Loop Looper'),
+            ),
+            ElevatedButton(
+              onPressed: isLooperPrepared ? _quitLooper : null,
+              child: const Text('Quit looper'),
             ),
             ElevatedButton(
               onPressed: isLooperPrepared ? _postMessage : null,
