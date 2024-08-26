@@ -1,0 +1,32 @@
+name: jnigen_looper_example
+description: "A new Flutter project."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  jni: 
+    git: 
+      url: https://github.com/dart-lang/native/
+      path: pkgs/jni
+      ref: 82c3dc56a5203d03cd0cf809b1e8fad4e2f2d82e
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^4.0.0
+
+  jnigen:
+    git: 
+      url: https://github.com/dart-lang/native/
+      path: pkgs/jnigen
+      ref: 82c3dc56a5203d03cd0cf809b1e8fad4e2f2d82e
+
+flutter:
+  uses-material-design: true
